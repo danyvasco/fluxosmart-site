@@ -1,0 +1,116 @@
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import Image from "next/image";
+
+export default function FluxoSmart() {
+  const imageSrc = "/A_digital_graphic_design_promoting_FluxoSmart_fe.png";
+
+  return (
+    <main className="bg-gray-950 text-white min-h-screen font-sans">
+      <section className="text-center py-20 px-4">
+        {imageSrc && (
+          <Image
+            src={imageSrc}
+            alt="FluxoSmart Logo"
+            width={600}
+            height={400}
+            className="mx-auto rounded-xl shadow-xl"
+          />
+        )}
+        <h1 className="text-5xl font-bold mt-6 text-blue-400">FluxoSmart</h1>
+        <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+          Aceleramos o crescimento de pequenas empresas com automações inteligentes, sistemas sob medida e marketing de alta performance.
+        </p>
+        <Button className="mt-6 text-lg px-8 py-4">Fale com a gente</Button>
+      </section>
+
+      <section className="px-10 py-10">
+        <div className="aspect-w-16 aspect-h-9 max-w-4xl mx-auto">
+          <iframe
+            src="https://www.youtube.com/embed/VIDEO_ID"
+            title="Apresentação da FluxoSmart"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            className="w-full h-96"
+          ></iframe>
+        </div>
+      </section>
+
+      <section className="grid md:grid-cols-3 gap-6 px-10 py-16">
+        <Card>
+          <CardContent className="p-6">
+            <h2 className="text-2xl font-semibold text-blue-300 mb-2">Automação de Processos</h2>
+            <p className="text-gray-300">Reduza tarefas repetitivas com fluxos inteligentes integrados ao WhatsApp, Google Sheets e CRMs.</p>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardContent className="p-6">
+            <h2 className="text-2xl font-semibold text-green-300 mb-2">Sistemas de Gestão</h2>
+            <p className="text-gray-300">Controle financeiro, estoque, vendas e relatórios personalizados para sua realidade.</p>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardContent className="p-6">
+            <h2 className="text-2xl font-semibold text-red-300 mb-2">Tráfego Pago</h2>
+            <p className="text-gray-300">Campanhas inteligentes no Google, Instagram e YouTube para atrair mais clientes.</p>
+          </CardContent>
+        </Card>
+      </section>
+
+      <section className="px-10 py-20 bg-gray-900 text-center">
+        <h2 className="text-4xl font-bold mb-6 text-blue-400">Quem somos</h2>
+        <p className="max-w-3xl mx-auto text-gray-300 text-lg">
+          Somos uma equipe apaixonada por soluções digitais que geram resultados reais. Unimos tecnologia, estratégia e atendimento humano para entregar o que o seu negócio realmente precisa.
+        </p>
+      </section>
+
+      <section className="px-10 py-20 bg-gray-950">
+        <h2 className="text-4xl font-bold mb-10 text-center text-blue-400">Nosso Portfólio</h2>
+        <div className="grid md:grid-cols-2 gap-8">
+          <Card>
+            <CardContent className="p-6">
+              <h3 className="text-2xl font-semibold text-green-400 mb-2">Automação para Pet Shop</h3>
+              <p className="text-gray-300">Implantamos automações de agendamento e notificações no WhatsApp, reduzindo 80% das tarefas manuais da equipe.</p>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardContent className="p-6">
+              <h3 className="text-2xl font-semibold text-yellow-400 mb-2">Sistema de Gestão para Restaurante</h3>
+              <p className="text-gray-300">Sistema sob medida com controle de pedidos, estoque e relatórios de vendas, integrando com o delivery.</p>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardContent className="p-6">
+              <h3 className="text-2xl font-semibold text-red-400 mb-2">Campanha de Tráfego para Barbearia</h3>
+              <p className="text-gray-300">Campanha no Instagram que gerou aumento de 220% nas reservas em 30 dias com anúncios segmentados.</p>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardContent className="p-6">
+              <h3 className="text-2xl font-semibold text-blue-300 mb-2">Dashboard Financeiro para Loja de Roupas</h3>
+              <p className="text-gray-300">Dashboard interativo com vendas, fluxo de caixa e margem de lucro em tempo real com integração ao Google Sheets.</p>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      <section className="px-10 py-20">
+        <h2 className="text-4xl font-bold mb-6 text-center text-blue-400">Entre em contato</h2>
+        <form className="max-w-2xl mx-auto space-y-6">
+          <Input placeholder="Seu nome" className="bg-gray-800 border-none text-white" />
+          <Input placeholder="Seu e-mail" className="bg-gray-800 border-none text-white" />
+          <Textarea placeholder="Como podemos ajudar?" className="bg-gray-800 border-none text-white" />
+          <Button className="w-full py-4 text-lg">Enviar mensagem</Button>
+        </form>
+      </section>
+
+      <footer className="text-center text-sm text-gray-500 py-10">
+        © 2025 FluxoSmart. Todos os direitos reservados.
+      </footer>
+    </main>
+  );
+}
